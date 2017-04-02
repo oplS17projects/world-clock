@@ -13,41 +13,42 @@ gives valuable exprience for front end devloping work. During this project, we w
 libraries and functions of racket (scheme) and have team work exprience.   
 
 ### Analysis
+We are mostly using functions and techniques which we have learnt in class to bear on the project. 
 Explain what approaches from class you will bring to bear on the project.
 
-Be explicit about the techiques from the class that you will use. For example:
+Been explicit about the techiques from the class that we will use. For example:
 
-- Will you use data abstraction? How?
-- Will you use recursion? How?
-- Will you use map/filter/reduce? How? 
-- Will you use object-orientation? How?
-- Will you use functional approaches to processing your data? How?
-- Will you use state-modification approaches? How? (If so, this should be encapsulated within objects. `set!` pretty much should only exist inside an object.)
-- Will you build an expression evaluator, like we did in the symbolic differentatior and the metacircular evaluator?
-- Will you use lazy evaluation approaches?
+- Data abstraction:
+  For checking Time Zone's offset time from UTC time.
 
-The idea here is to identify what ideas from the class you will use in carrying out your project. 
+- Recursion: 
+  We will use Recursion techniqe to do match base on 24 hour and 60 minute. This math functions are used to convert time from one time
+  zone into another time zone.
+  
+- map/filter/reduce:
+  We will use this method to check timezone and its data (offset time from UTC) from list.
+  
+- object-orientation? How?
 
-**Your project will be graded, in part, by the extent to which you adopt approaches from the course into your implementation, _and_ your discussion about this.**
+- functional approaches:
+  Usally, calcute time difference is easy once we have timezone data. But it is difficult to calculate data from offset data of timezone.
+  So for that we may use this approach to calculate date.
+
+- state-modification approaches: 
+  We may use this method to handle DAY LIGHT TIME SAVING funcionality while giving output to user. 
+
+- lazy evaluation approaches:
+  We have not dicided yet about this. So if we find something during our project work, then we will mantioned it later on.
+ 
 
 ### External Technologies
-You are encouraged to develop a project that connects to external systems. For example, this includes systems that:
-
-- retrieve information or publish data to the web
-- generate or process sound
-- control robots or other physical systems
-- interact with databases
-
-If your project will do anything in this category (not only the things listed above!), include this section and discuss.
+Accorsing to documentation on rackey/tzinfo library, UNIX systems usually come with a compiled version of the IANA database (typically in
+/usr/share/zoneinfo). tzinfo will use the system’s database if available. However, if the tzdata package is installed, that will be used
+instead. Since Windows systems do not come with a zoneinfo database, Windows users must install tzdata to use tzinfo. So, we had to
+install tzdata (which is available on GitHub publically) to use tzinfo. 
 
 ### Data Sets or other Source Materials
-If you will be working with existing data, where will you get those data from? (Dowload from a website? Access in a database? Create in a simulation you will build? ...)
-
-How will you convert your data into a form usable for your project?  
-
-If you are pulling data from somewhere, actually go download it and look at it before writing the proposal. Explain in some detail what your plan is for accomplishing the necessary processing.
-
-If you are using some other starting materials, explain what they are. Basically: anything you plan to use that isn't code.
+We are not using other source materials in project. But we are using timezone data from other website as a research work.
 
 ### Deliverable and Demonstration
 Explain exactly what you'll have at the end. What will it be able to do at the live demo?
@@ -88,17 +89,6 @@ Which portion of the work will be completed (and committed to Github) by this da
 What additionally will be completed before the public presentation?
 
 ## Group Responsibilities
-Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable.
-
-Please use Github properly: each individual must make the edits to this file representing their own section of work.
-
-**Additional instructions for teams of three:** 
-* Remember that you must have prior written permission to work in groups of three (specifically, an approved `FP3` team declaration submission).
-* The team must nominate a lead. This person is primarily responsible for code integration. This work may be shared, but the team lead has default responsibility.
-* The team lead has full partner implementation responsibilities also.
-* Identify who is team lead.
-
-In the headings below, replace the silly names and GitHub handles with your actual ones.
 
 ### Prachi Patel @prachiipatel
 will work on...
