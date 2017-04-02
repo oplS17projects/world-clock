@@ -45,8 +45,9 @@ We are not using other source materials in project. But we are using timezone da
 ### Deliverable and Demonstration
 
 ### Evaluation of Results
-How will you know if you are successful? 
-If you include some kind of _quantitative analysis,_ that would be good.
+We will do enough testing so if we find any bug during testing then we will debug it and solve it. We have enough data about timezone
+offset with UTC time, so we will check our application output with our own calculation. Also we will use google time convertor application
+to compare our output. And for output of current time, which is easy to compare with online available sources' data.
 
 ## Architecture Diagram
 Upload the architecture diagram you made for your slide presentation to your repository, and include it in-line here.
@@ -56,10 +57,13 @@ Create several paragraphs of narrative to explain the pieces and how they intero
 ## Schedule
 
 ### First Milestone (Sun Apr 9)
-By the first milestone, the plan is to have time zone converter working for different locations with respective time zone. 
+By the first milestone, There are two parts to be done. First part is user interface and second part is time convertor functionality.
+The plan is to have time zone converter working for different locations with respective time zone. And also user can check the current
+time by selecting time zone from drop down menu. 
 
 ### Second Milestone (Sun Apr 16)
-By the second milestone, we hope to our application working with expected output. 
+We will evalute the requirment of the project first. And after that we will do enough testing for this application so we could not find
+any bug while giving presentation publically. Thus, by the second milestone, we hope to our application working with expected output. 
 
 ### Public Presentation (Mon Apr 24, Wed Apr 26, or Fri Apr 28 [your date to be determined later])
 For the public presentation, we will have a working World Clock application.
@@ -70,5 +74,5 @@ For the public presentation, we will have a working World Clock application.
 I will work on implementation of world clock. I will use two libraries tzinfo and racket/date. The tzinfo library provides an interface for querying the Internet Assigned Numbers Authority time zone database. It is helpful when the selected time zone ID falls into a gap between offset, when daylight saving time starts or ends. So, the user will be able to find the time on different locations with respective time zone. Once I get offset with UTC, it will be easy to get time and date for selected time zone. 
 
 ### Vibhuti Patel @vibhutipatel18 
-Vibhuti is team lead. Vibhuti is working on designing and coding part of graphical user interface. Once structure is ready, vibhuti will
-add events and functionality in GUI. After that, vibhuti will be helping to write code for converting time functionality.   
+I am team leader. I am working on designing and coding part of graphical user interface. Once structure is ready, I will
+add events and functionality in GUI. After that, I will be helping to write code for converting time functionality.   
