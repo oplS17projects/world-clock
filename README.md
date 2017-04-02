@@ -77,21 +77,19 @@ The nature of deliverables depend on your project, but may include things like p
 
 You will be expected to turn in code, documentation, and data (as appropriate) at each of these stages.
 
-Write concrete steps for your schedule to move from concept to working system. 
-
 ### First Milestone (Sun Apr 9)
-Which portion of the work will be completed (and committed to Github) by this day? 
+By the first milestone, the plan is to have time zone converter working for different locations with respective time zone. 
 
 ### Second Milestone (Sun Apr 16)
-Which portion of the work will be completed (and committed to Github) by this day?  
+By the second milestone, we hope to our application working with expected output. 
 
 ### Public Presentation (Mon Apr 24, Wed Apr 26, or Fri Apr 28 [your date to be determined later])
-What additionally will be completed before the public presentation?
+For the public presentation, we will have a working World Clock application.
 
 ## Group Responsibilities
 
 ### Prachi Patel @prachiipatel
-will work on...
+I will work on implementation of world clock. The user will be able to find the time on different locations with respective time zone. The objectives of our project include time setting and location’s choice. I will use two libraries tzinfo and racket/date. The tzinfo library provides an interface for querying the Internet Assigned Numbers Authority time zone database. It is helpful when the selected time zone ID falls into a gap between offset, when daylight saving time starts or ends.
 
 ### Vibhuti Patel @vibhutipatel18 
 Vibhuti is team lead. Vibhuti is working on designing and coding part of graphical user interface. Once structure is ready, vibhuti will
