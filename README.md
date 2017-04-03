@@ -42,6 +42,10 @@ We are not using other source materials in project. But we are using timezone da
 
 ### Deliverable and Demonstration
 
+With this application, user can see the current time by selecting time zone. Also user can convert time from one timezone to another
+timezone. This application is interactive. Before the Public Presentation, we can be able to show it working application and will give a
+live demo in presentation.
+
 ### Evaluation of Results
 We will do enough testing so if we find any bug during testing then we will debug it and solve it. We have enough data about timezone
 offset with UTC time, so we will check our application output with our own calculation. Also we will use google time convertor application
