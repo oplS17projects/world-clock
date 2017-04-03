@@ -21,8 +21,6 @@ We are mostly using functions and techniques which we have learnt in class to be
 - map/filter/reduce:
   We will use this method to check timezone and its data (offset time from UTC) from list.
   
-- object-orientation? How?
-
 - functional approaches:
  (utc-seconds->tzoffset tzid seconds) returns the offset in second from UTC in effect at that moment of time in the given time zone. We   can use functional approach to convert offset from second to hours, so we can easily add or subtract from UTC.  
 
@@ -50,9 +48,25 @@ offset with UTC time, so we will check our application output with our own calcu
 to compare our output. And for output of current time, which is easy to compare with online available sources' data.
 
 ## Architecture Diagram
-![test image](/Architecture-diagram.png?raw=true "test image")
 
-Create several paragraphs of narrative to explain the pieces and how they interoperate.
+![ouput image](/Architecture-diagram.png?raw=true "ouput image")
+
+We need to follow this diagram from top to bottom to complete whole project in time. This diagram is including implimentaion/desing,
+evalution and testing parts. 
+
+We have collected enough information about timezones. So now next step is to use those information in our project work. After this
+research, vibhuti has started developing graphical user interface using recket/gui library. This gui design is shown below. And prachi has
+been exploring racket/tzinfo library. She is writing some basic functions to display current time of different time zones as output. 
+ 
+![output-tab2 image](/world-clock-current-time-tab.png?raw=true "output-tab2 image")
+
+Third step is converting time from one timezone to another. We are writing our own code to calculate time using time difference data.
+Math calculation on 60 minute and 24 hour base will be interesting. Thus, we are taking time zone, other time zone (to convert in) and
+future/past time detail as input from user and will return time as output.
+
+Forth step is evalution and testing. We will test the whole application and will compare output with expecting result. Testing is the most
+important part of the project so we will give enough time and effort for it. So, by the last of week of april, our project will be ready
+to present.
 
 ## Schedule
 
