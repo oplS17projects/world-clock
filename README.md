@@ -50,7 +50,7 @@ offset with UTC time, so we will check our application output with our own calcu
 to compare our output. And for output of current time, which is easy to compare with online available sources' data.
 
 ## Architecture Diagram
-Upload the architecture diagram you made for your slide presentation to your repository, and include it in-line here.
+![test image](/Architecture-diagram.png?raw=true "test image")
 
 Create several paragraphs of narrative to explain the pieces and how they interoperate.
 
