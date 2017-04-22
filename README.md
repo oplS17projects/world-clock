@@ -10,20 +10,20 @@ We are mostly using functions and techniques which we have learnt in class to be
 - #### Data abstraction:
   For checking Time Zone's offset time from UTC time.
 
-- ##### Recursion: 
+- #### Recursion: 
   We will use Recursion techniqe to do match base on 24 hour and 60 minute. This math functions are used to convert time from one time
   zone into another time zone.
   
-- ##### map/filter/reduce:
+- #### map/filter/reduce:
   We will use this method to check timezone and its data (offset time from UTC) from list.
   
-- ##### functional approaches:
+- #### functional approaches:
  (utc-seconds->tzoffset tzid seconds) returns the offset in second from UTC in effect at that moment of time in the given time zone. We   can use functional approach to convert offset from second to hours, so we can easily add or subtract from UTC.  
 
-- ##### state-modification approaches: 
+- #### state-modification approaches: 
   We may use this method to handle DAY LIGHT TIME SAVING funcionality while giving output to user. 
 
-- ##### lazy evaluation approaches:
+- #### lazy evaluation approaches:
   We have not dicided yet about this. So if we find something during our project work, then we will mantioned it later on.
  
 
@@ -35,14 +35,10 @@ We have not used other source materials in project. But we have used time zone d
 
 ### Deliverable and Demonstration
 
-With this application, user can see the current time by selecting time zone. Also user can convert time from one timezone to another
-timezone. This application is interactive. Before the Public Presentation, we can be able to show it working application and will give a
-live demo in presentation.
+With this application, user can see the current time by selecting time zone and also, can convert time from one timezone to another timezone. This application is interactive. 
 
 ### Evaluation of Results
-We will do enough testing so if we find any bug during testing then we will debug it and solve it. We have enough data about timezone
-offset with UTC time, so we will check our application output with our own calculation. Also we will use google time convertor application
-to compare our output. And for output of current time, which is easy to compare with online available sources' data.
+We had enough data about timezone offset with UTC time, so we have checked our application output by calculating data by own and have used google time convertor application to compare our output. Fot output of current time, which is easy to compare with online available sources' data.
 
 ## Architecture Diagram
 
