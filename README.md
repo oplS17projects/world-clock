@@ -7,23 +7,23 @@ We are using tree main libraries for this project which are racket/gui, tzinfo a
 ### Analysis
 We are mostly using functions and techniques which we have learnt in class to bear on the project. 
 
-- # Data abstraction:
+- #### Data abstraction:
   For checking Time Zone's offset time from UTC time.
 
-- # Recursion: 
+- ##### Recursion: 
   We will use Recursion techniqe to do match base on 24 hour and 60 minute. This math functions are used to convert time from one time
   zone into another time zone.
   
-- # map/filter/reduce:
+- ##### map/filter/reduce:
   We will use this method to check timezone and its data (offset time from UTC) from list.
   
-- # functional approaches:
+- ##### functional approaches:
  (utc-seconds->tzoffset tzid seconds) returns the offset in second from UTC in effect at that moment of time in the given time zone. We   can use functional approach to convert offset from second to hours, so we can easily add or subtract from UTC.  
 
-- # state-modification approaches: 
+- ##### state-modification approaches: 
   We may use this method to handle DAY LIGHT TIME SAVING funcionality while giving output to user. 
 
-- # lazy evaluation approaches:
+- ##### lazy evaluation approaches:
   We have not dicided yet about this. So if we find something during our project work, then we will mantioned it later on.
  
 
