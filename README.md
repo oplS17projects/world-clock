@@ -38,7 +38,7 @@ We have not used other source materials in project. But we have used time zone d
 With this application, user can see the current time by selecting time zone and also, can convert time from one timezone to another timezone. This application is interactive. 
 
 ### Evaluation of Results
-We had enough data about timezone offset with UTC time, so we have checked our application output by calculating data by own and have used google time convertor application to compare our output. Fot output of current time, which is easy to compare with online available sources' data.
+We had enough data about timezone offset with UTC time to check our application output by calculating data by own and also have used google time convertor application to compare output. Fot output of current time, which is easy to compare with online available sources' data.
 
 ## Architecture Diagram
 
