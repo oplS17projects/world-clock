@@ -1,44 +1,43 @@
 # world-clock
 
-### Statement
-   In this century, the growth of technology is at its another level and the world is working round the clock and coordinating with other countries' time zone to do great team work. So, when someone says that he or she will contact on this time according to his or her time zone, that time it is very difficult to calculate time for other person who is in different time zone. The solution of this inconvenience is “The World-Clock” application. World - clock is an application which is useful to check current time for selected time zone. There is another important functionality of time-convertor which converts future or past time and date in other time zone. For this project, we get to know how many time zones are in the world and what is the time offset of those time zones with UTC time. We have calculated time using offset of selected time zone from UTC. For output, we have used 24-hour base format for time and mm/dd/yyyy format for date.
-We are using tree main libraries for this project which are racket/gui, tzinfo and racket/date. The GUI designing and coding for GUI is always fun part and gives valuable experience for front end developing work. During this project, we have learned a lot about these tree libraries, function of racket, GitHub and experienced team work.
+   In this century, the growth of technology is at its another level and the world is working round the clock and coordinating with other countries' time zone to do great team work. So, when someone says that he or she will contact on this time according to his or her time zone, that time it is very difficult to calculate time for other person who is in different time zone. The solution of this inconvenience is “The World-Clock” application. World - clock is an application which is useful to check current time for selected time zone. There is another important functionality of time-convertor which converts future or past time and date in other time zone. For this project, we get to know how many time zones are in the world and what is the time offset of those time zones with UTC time. We have calculated time using offset of selected time zone from UTC. For output, we have used 24-hour base format for time and mm/dd/yyyy format for date. During this project, we have learned a lot about these tree libraries, function of racket, GitHub and experienced team work.
 
 ### Analysis
 We are mostly using functions and techniques which we have learnt in class to bear on the project. 
 
-- #### Data abstraction:
-  For checking Time Zone's offset time from UTC time.
+- Data abstraction: For checking Time Zone's offset time from UTC time.
 
-- #### Recursion: 
-  We will use Recursion techniqe to do match base on 24 hour and 60 minute. This math functions are used to convert time from one time
-  zone into another time zone.
+- Recursion: We will use Recursion techniqe to do match base on 24 hour and 60 minute. This math functions are used to convert time from one time zone into another time zone.
   
-- #### map/filter/reduce:
-  We will use this method to check timezone and its data (offset time from UTC) from list.
+- map/filter/reduce: We will use this method to check timezone and its data (offset time from UTC) from list.
   
-- #### functional approaches:
- (utc-seconds->tzoffset tzid seconds) returns the offset in second from UTC in effect at that moment of time in the given time zone. We   can use functional approach to convert offset from second to hours, so we can easily add or subtract from UTC.  
+- functional approaches: (utc-seconds->tzoffset tzid seconds) returns the offset in second from UTC in effect at that moment of time in the given time zone. We can use functional approach to convert offset from second to hours, so we can easily add or subtract from UTC.  
 
-- #### state-modification approaches: 
-  We may use this method to handle DAY LIGHT TIME SAVING funcionality while giving output to user. 
+- state-modification approaches: We may use this method to handle DAY LIGHT TIME SAVING funcionality while giving output to user. 
 
-- #### lazy evaluation approaches:
-  We have not dicided yet about this. So if we find something during our project work, then we will mantioned it later on.
+- lazy evaluation approaches: We have not dicided yet about this. So if we find something during our project work, then we will mantioned it later on.
  
 
+#### Libraries
+Racket Libraries that we used include:
+1. racket/gui/base
+2. tzinfo
+3. racket/date
+
+
 ### External Technologies
-Accorsing to documentation on rackey/tzinfo library, UNIX systems usually come with a compiled version of the IANA database (typically in /usr/share/zoneinfo). tzinfo will use the system’s database if available. However, if the tzdata package is installed, that will be used instead. Since Windows systems do not come with a zoneinfo database, Windows users must install tzdata to use tzinfo. So, we had to install tzdata (which is available on GitHub publically) to use tzinfo.
+Accorsing to documentation on rackey/tzinfo library, UNIX systems usually come with a compiled version of the IANA database (typically in /usr/share/zoneinfo). tzinfo will use the system’s database if available. However, if the tzdata package is installed, that will be used instead. Since Windows systems do not come with a zoneinfo database, Windows users must install tzdata to use tzinfo. So, we had to install tzdata (which is available on GitHub publicly) to use tzinfo.
 
 ### Data Sets or other Source Materials
 We have not used other source materials in project. But we have used time zone data from other website as a research work and for test purpose. 
 
 ### Deliverable and Demonstration
-
-With this application, user can see the current time by selecting time zone and also, can convert time from one timezone to another timezone. This application is interactive. 
+We developed a program which prompt the user to select time zone to see current time. User can also check the time in different time zone by selecting any date and time.  
 
 ### Evaluation of Results
-We had enough data about timezone offset with UTC time to check our application output by calculating data by own and also have used google time convertor application to compare output. Fot output of current time, which is easy to compare with online available sources' data.
+Successful implementation is defined as having:
+1 Ability to select country and city from the list to see current time. 
+2 convert time by selecting date, time and different time zones
 
 ## Architecture Diagram
 
