@@ -18,7 +18,7 @@ We are mostly using functions and techniques which we have learnt in class to be
 - lazy evaluation approaches: We have not dicided yet about this. So if we find something during our project work, then we will mantioned it later on.
  
 
-#### Libraries
+### Libraries
 Racket Libraries that we used include:
 1. racket/gui/base
 2. tzinfo
@@ -36,48 +36,33 @@ We developed a program which prompt the user to select time zone to see current 
 
 ### Evaluation of Results
 Successful implementation is defined as having:
-1 Ability to select country and city from the list to see current time. 
-2 convert time by selecting date, time and different time zones
+1. Ability to select country and city from the list to see current time. 
+2. convert time by selecting date, time and different time zones
 
 ## Architecture Diagram
 
-![ouput image](/Architecture-diagram.png?raw=true "ouput image")
+![ouput image](/Architecture_Diagram.png?raw=true "ouput image")
 
-We need to follow this diagram from top to bottom to complete whole project in time. This diagram is including implimentaion/desing,
-evalution and testing parts. 
-
-We have collected enough information about timezones. So now next step is to use those information in our project work. After this
-research, vibhuti has started developing graphical user interface using recket/gui library. This gui design is shown below. And prachi has
-been exploring racket/tzinfo library. She is writing some basic functions to display current time of different time zones as output. 
- 
-![output-tab2 image](/world-clock-current-time-tab.png?raw=true "output-tab2 image")
-
-Third step is converting time from one timezone to another. We are writing our own code to calculate time using time difference data.
-Math calculation on 60 minute and 24 hour base will be interesting. Thus, we are taking time zone, other time zone (to convert in) and
-future/past time detail as input from user and will return time as output.
-
-Forth step is evalution and testing. We will test the whole application and will compare output with expecting result. Testing is the most
-important part of the project so we will give enough time and effort for it. So, by the last of week of april, our project will be ready
-to present.
+This diagram includes implementation/design, evaluation and testing parts.
+We have collected enough information about timezones. So now next step is to use those information in our project work. After this research, Vibhuti has started developing graphical user interface using recket/gui library. This gui design is shown below. And Prachi has been exploring racket/tzinfo library. She is writing some basic functions to display current time for selected time zone.
+Then we convert time from one time zone to another. User get output for time in 24-hour base format and date in mm/dd/yyyy format. 
+Forth step is evaluation and testing. We have done enough testing and compared output with expected result. 
 
 ## Schedule
 
 ### First Milestone (Sun Apr 9)
-By the first milestone, There are two parts to be done. First part is user interface and second part is time convertor functionality.
-The plan is to have time zone converter working for different locations with respective time zone. And also user can check the current
-time by selecting time zone from drop down menu. 
+By the first milestone, we have done two parts. First part was user interface and second was time convertor functionality. The plan was to have time zone converter working for different locations with respective time zone. User can also check the current time by selecting country/city from drop down menu.
 
 ### Second Milestone (Sun Apr 16)
-We will evalute the requirment of the project first. And after that we will do enough testing for this application so we could not find
-any bug while giving presentation publically. Thus, by the second milestone, we hope to our application working with expected output. 
+We evaluated the requirements of the project and then done enough testing for the application. 
 
-### Public Presentation (Mon Apr 24, Wed Apr 26, or Fri Apr 28 [your date to be determined later])
-For the public presentation, we will have a working World Clock application.
+### Public Presentation (Wed Apr 26)
+we have working “World Clock” application.
 
 ## Group Responsibilities
 
 ### Prachi Patel @prachiipatel
-I will work on implementation of world clock. I will use two libraries tzinfo and racket/date. The tzinfo library provides an interface for querying the Internet Assigned Numbers Authority time zone database. It is helpful when the selected time zone ID falls into a gap between offset, when daylight saving time starts or ends. So, the user will be able to find the time on different locations with respective time zone. Once I get offset with UTC, it will be easy to get time and date for selected time zone. 
+I worked on the implementation of the application, using two libraries ‘tzinfo’ and ‘racket/date’. The tzinfo library provides an interface for querying the Internet Assigned Numbers Authority time zone database. It is helpful when the selected time zone ID falls into a gap between offset, when daylight saving time starts or ends. So, the user will be able to find the time on different locations with respective time zone. 
 
 ### Vibhuti Patel @vibhutipatel18 
 I am team leader. I am working on designing and coding part of graphical user interface. Once structure is ready, I will
