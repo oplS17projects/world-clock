@@ -41,12 +41,13 @@ Successful implementation is defined as having:
 
 ## Architecture Diagram
 
-![ouput image](/Architecture_Diagram.png?raw=true "ouput image")
+![ouput image](/Diagram.png?raw=true "ouput image")
 
 This diagram includes implementation/design, evaluation and testing parts.
-We have collected enough information about timezones. So now next step is to use those information in our project work. After this research, Vibhuti has started developing graphical user interface using recket/gui library. This gui design is shown below. And Prachi has been exploring racket/tzinfo library. She is writing some basic functions to display current time for selected time zone.
-Then we convert time from one time zone to another. User get output for time in 24-hour base format and date in mm/dd/yyyy format. 
-Forth step is evaluation and testing. We have done enough testing and compared output with expected result. 
+   
+   We have collected enough information about time zones. So now next step is to use those information in our project work. After this research, Vibhuti has developed graphical user interface using recket/gui library. And Prachi worked with racket/tzinfo library. She wrote some basic functions to display current time for selected time zone. Then we worked on procedures to convert time from one time zone to another. User get output for time in 24-hour base format and date in mm/dd/yyyy format. Forth step was evaluation and testing. We have done enough testing and compared output with expected result. 
+
+
 
 ## Schedule
 
