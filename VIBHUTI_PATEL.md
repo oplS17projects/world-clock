@@ -88,9 +88,9 @@ values from the list.
 ```    
 so,
 
-(string-split x "/") returns ```'("Africa" "Abidjan")```
+(string-split "Africa/Abidjan" "/") returns ```'("Africa" "Abidjan")```
 
-(car (string-split x "/")) returns ```"Africa"```
+(car (string-split "Africa/Abidjan" "/")) returns ```"Africa"```
 
 This function is used for seprating countries name from (all-tzids) list and creating list of those countries for user selections.
 
