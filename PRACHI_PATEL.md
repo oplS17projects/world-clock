@@ -57,7 +57,7 @@ This set of codes gives current date and time.
 The resulting date* reflects the time according to time zone.  
 ```number->string``` converts the argument to string. 
 
-Same pattern is used to get date and time for selected time zone id but different parameters.
+Same pattern is used to get date and time for selected time zone id.
 
 ```
 (define (modify-time-daylightsaving str time)
@@ -104,3 +104,4 @@ in short,
 ; (+ (current-seconds) systemid-time-offset) = UTC time
 ; (+ (current-seconds) systemid-time-offset selected-time-zone-offset = current time for UTC + selected time zone = current time in selected time zone id
 ```
+
