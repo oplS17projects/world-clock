@@ -1,7 +1,7 @@
 # World-Clock in Racket
 
 ## Prachi Patel
-### April 29, 2017
+### April 30, 2017
 
 # Overview
 This set of codes provides an interface to check current time for selected time zone. 
@@ -56,6 +56,8 @@ This set of codes gives current date and time.
 ```seconds->date``` takes ```(current-second)``` its argument and returns an instance of the date* structure type which is already built in racket. 
 The resulting date* reflects the time according to time zone.  
 ```number->string``` converts the argument to string. 
+```(current-second)``` Returns the current time in seconds since midnight January 1, 1970 for system time zone. 
+
 
 Same pattern is used to get date and time for selected time zone id.
 
@@ -89,6 +91,7 @@ If one select ```"America/New_York"``` from timezone-ids the it gives a structur
 (tzoffset -14400 #t "EDT")
 ```
 ```tzoffset-utc-seconds``` procedure gets the offset from the structure. 
+```utc-seconds->tzoffset``` and ```tzoffset-utc-seconds``` procedures are in ```tzinfo``` library. 
 
 ```
 (define (current-time-convertor str systemid-time-offset selected-time-zone-offset)
@@ -104,4 +107,38 @@ in short,
 ; (+ (current-seconds) systemid-time-offset) = UTC time
 ; (+ (current-seconds) systemid-time-offset selected-time-zone-offset = current time for UTC + selected time zone = current time in selected time zone id
 ```
+## 3. Using Iteration to Accumulate Results
+```
+(define (day/year-list-helper end n lst)
+  (if (> n end)
+      lst
+      (day/year-list-helper end (+ n 1) (append lst (list (number->string n))))))
+```
+```day/year-list-helper``` procedure takes start, end, convert in to string and returns a list of strings. 
 
+Vibhuti Wrote a procedure called ```day-list-creater``` 
+which creates a list of dates for respective month and year. 
+(e.g. if its leap year then there are 29 days in February otherwise 28 days)
+
+```
+(define (day-list-creater)
+  (let ((year (string->number (send time-convertor-from-year-date-field get-value)))
+        (mon (send time-convertor-from-month-date-field get-value)))
+    (cond ((search-in-list mon '("JAN" "MARCH" "MAY" "JULY" "AUG" "OCT" "DEC")) (day/year-list-helper 31 1 '()))
+          ((search-in-list mon '("APRIL" "JUNE" "SEP" "NOV")) (day/year-list-helper 30 1 '()))
+          ((and (string=? mon "FEB") (= (remainder year 4) 0)) (day/year-list-helper 29 1 '()))
+          (else (day/year-list-helper 28 1 '())))))
+```
+
+day-list-creater calls a procedure day/year-list-helper which takes the last date of the month, 1 (same for all month) and empty list. day/year-list-helper gives list of strings of all date of the respective month. 
+
+## 4. Creating a list of strings
+```
+(define (time-zones-offset-con from-timezone-offset to-timezone-offset)
+  (let ((from-tz (tzoffset-utc-seconds (utc-seconds->tzoffset from-timezone-offset (current-seconds))))
+        (to-tz (tzoffset-utc-seconds (utc-seconds->tzoffset to-timezone-offset (current-seconds)))))
+    (if (positive? (+ (abs from-tz) to-tz))
+        (add-sec-offset-to-tz (+ (abs from-tz) to-tz))
+        (sub-sec-offset-to-tz (+ (abs from-tz) to-tz)))))
+```
+time-zones-offset-con accepts two arguments, one is from-timezone-offset (time zone id which used has selected) and second is to-time zone-offset (time zone id in which time has to convert to). It will find the get the offsets for both time zones and find the difference between them. Then it will call add-sec-offset-to-tz or sub-sec-offset-to-tz based on the result of from-tz(offset of from-timezone-offset from UTC) 
