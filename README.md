@@ -38,7 +38,7 @@ Successful implementation is defined as having:
 
 ## Resulting Output
 
-![ouput image](/output_1.png?raw=true "ouput image")  ![ouput image](/output_2.png?raw=true "ouput image")
+![ouput image](/output1.png?raw=true "ouput image")  ![ouput image](/output2.png?raw=true "ouput image")
 
 ## Architecture Diagram
 
