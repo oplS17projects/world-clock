@@ -36,6 +36,10 @@ Successful implementation is defined as having:
 1. Ability to select country and city from the list to see current time. 
 2. convert time by selecting date, time and different time zones
 
+## Resulting Output
+
+![ouput image](/output_1.png?raw=true "ouput image")  ![ouput image](/output_2.png?raw=true "ouput image")
+
 ## Architecture Diagram
 
 ![ouput image](/Diagram.png?raw=true "ouput image")
