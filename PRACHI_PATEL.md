@@ -37,7 +37,7 @@ UMass Lowell's COMP.3010 Organization of Programming languages course.
 
 Five examples are shown and they are individually numbered. 
 
-## 1. 
+## 1. Using "date" Structure
 
 ```
 (define (todays-date)
@@ -130,7 +130,7 @@ which creates a list of dates for respective month and year.
           (else (day/year-list-helper 28 1 '())))))
 ```
 
-day-list-creater calls a procedure day/year-list-helper which takes the last date of the month, 1 (same for all month) and empty list. day/year-list-helper gives list of strings of all date of the respective month. 
+```day-list-creater``` calls a procedure ```day/year-list-helper``` which takes the last date of the month, 1 (same for all month) and empty list. ```day/year-list-helper``` gives list of strings of all date of the respective month. 
 
 ## 4. Creating a list of strings
 ```
@@ -141,4 +141,19 @@ day-list-creater calls a procedure day/year-list-helper which takes the last dat
         (add-sec-offset-to-tz (+ (abs from-tz) to-tz))
         (sub-sec-offset-to-tz (+ (abs from-tz) to-tz)))))
 ```
-time-zones-offset-con accepts two arguments, one is from-timezone-offset (time zone id which used has selected) and second is to-time zone-offset (time zone id in which time has to convert to). It will find the get the offsets for both time zones and find the difference between them. Then it will call add-sec-offset-to-tz or sub-sec-offset-to-tz based on the result of from-tz(offset of from-timezone-offset from UTC) 
+```time-zones-offset-con``` accepts two arguments, one is ```from-timezone-offset``` (time zone id which used has selected) and second is ```to-time-zone-offset``` (time zone id in which time has to convert to). It will find the get the offsets for both time zones and find the difference between them. Then it will call ```add-sec-offset-to-tz``` or ```sub-sec-offset-to-tz``` based on the result of from-tz(offset of ```from-timezone-offset``` from UTC) 
+```
+(define (add-sec-offset-to-tz offset-sec)
+  (let ((total-sec (+ (string->number (send time-convertor-from-sec-time-field get-value)) offset-sec)))
+    (add-min-offset-to-tz (quotient total-sec 60) (list (remainder total-sec 60)) '())))
+
+(define (add-min-offset-to-tz offset-min time-list date-list)
+  (let ((total-min (+ (string->number (send time-convertor-from-min-time-field get-value)) offset-min)))
+    (add-hour-offset-to-tz (quotient total-min 60) (append time-list (list (remainder total-min 60))) '())))
+
+(define (add-hour-offset-to-tz offset-hour time-list date-list)
+  (let ((total-hour (+ (string->number (send time-convertor-from-hour-time-field get-value)) offset-hour)))
+    (add-day-offset-to-tz (quotient total-hour 24) (append time-list (list (remainder total-hour 24))) '())))
+```
+
+```add-sec-offset-to-tz``` will accept the sum of both time zones, then get the seconds the user has selected to convert and convert that from string to seconds. Add those seconds and ```offset-sec``` then assign that value to ```total-sec```. at last, ```add-min-offset-to-tz``` procedure is call which will have arguments of quotient of total-sec 60 and list of remainders of total-sec and 60. ```add-min-offset-to-tz``` will work same way but the value of (quotient total-sec 60) will be added to total minutes. Same as that ```add-min-offset-to-tz procedure``` will call add-hour-offset-to-tz. 
